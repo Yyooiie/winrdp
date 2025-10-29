@@ -1,3 +1,105 @@
+import os
+import cfonts
+from cfonts import render
+import requests
+from bs4 import BeautifulSoup
+import json
+import re
+import sys
+from datetime import datetime, timedelta, timezone
+from user_agent import generate_user_agent
+from user_agent import generate_user_agent as ggb
+from rich.console import Console
+from rich.panel import Panel
+import threading
+import webbrowser
+import random
+import hashlib
+import uuid
+from colorama import Fore, Style
+from requests import post as pp
+from random import choice as cc
+from random import randrange as rr
+import subprocess
+import importlib.util
+import time
+
+session = requests.Session()
+
+IST_OFFSET = timedelta(hours=5, minutes=30)
+
+c1 = '\x1b[38;5;120m'
+j21 = '\x1b[38;5;204m'
+p1 = '\x1b[38;5;150m'
+cyan = '\x1b[1m\x1b;36m'
+x = '\x1b[1;33m'
+white = '\x1b[1;37m'
+z = '\x1b[1;31m'
+
+print('━' * 66)
+logo = render('YOSEIF', font='block', colors=['white', 'black'], align='center', background='cyan', space=True)
+print(logo)
+print('━' * 66)
+time.sleep(1)
+
+total = 0
+hits = 0
+badinsta = 0
+bademail = 0
+goodig = 0
+b = random.randint(5,208)
+bo = f'\x1b[38;5;{b}m'
+print("")
+Token=input("BOT TOKEN : ")
+ID=input('USER ID : ')    
+
+def safe_int_input(prompt, default):
+    try:
+        value = input(prompt).strip()
+        return int(value) if value else default
+    except:
+        return default
+
+print('\nSelect a year for user ID range:')
+print("1 - 2011")
+print("2 - 2012") 
+print("3 - 2013")
+print("4 - 2014")
+print("5 - 2015")
+print("6 - 2016")
+print("7 - 2017")
+print("8 - 2018")
+print("9 - 2019")
+print("10 - 2011 » 2019")
+
+year_choice = safe_int_input('Enter your year choice (1-10): ', 5)
+
+year_ranges = {
+    1: (1279000, 17750000),       
+    2: (17750001, 279760000),      
+    3: (279760001, 900990000),     
+    4: (900990001, 1629010000),    
+    5: (1629010001, 2369359761),   
+    6: (2369359762, 4239516754),   
+    7: (4239516755, 6345108209),   
+    8: (6345108210, 10016232395),  
+    9: (10016232396, 27238602159),
+    10:(900990001, 27238602159)
+}
+
+bbk, Ido = year_ranges.get(year_choice, year_ranges[5]) 
+
+os.system('clear')
+
+def pppp():
+    global badinsta,hits,bademail,goodig
+
+    output = (f"\r"
+              f"HITS : {hits}    "
+              f"BAD IG : {badinsta}    "
+              f"BAD MAIL : {bademail}   "
+              f"  <3 YOSEIF ")
+    sys.stdout.write(output)
     sys.stdout.flush()
     
 yy = 'azertyuiopmlkjhgfdsqwxcvbn'
